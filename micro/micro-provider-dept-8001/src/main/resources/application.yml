@@ -1,0 +1,22 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.mirai.micro.entity
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: micro-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///cloudDB01?serverTimezone=Asia/Shanghai&useSSL=FALSE
+    username: root
+    password: y973593589
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200

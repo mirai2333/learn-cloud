@@ -1,0 +1,3 @@
+# Project exclude paths
+/micro/micro-api/target/
+/micro/micro-provider-dept-8001/target/
