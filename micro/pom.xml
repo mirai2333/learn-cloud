@@ -10,6 +10,7 @@
     <modules>
         <module>micro-api</module>
         <module>micro-provider-dept-8001</module>
+        <module>micro-consumer-dept-8000</module>
     </modules>
     <packaging>pom</packaging>
 
