@@ -20,3 +20,16 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7000:7000/eureka/,http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/
+  instance:
+    instance-id: micro-dept-8001
+    prefer-ip-address: true
+info:
+  app.name: mirai-cloud
+  company.name: mirai-Mars
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

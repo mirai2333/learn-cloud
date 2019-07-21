@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/consumer/dept/")
 public class DeptConsumerController {
-    private static final String API_PREFIX = "http://localhost:8001";
+    private static final String API_PREFIX = "http://MICRO-DEPT";
     private final RestTemplate restTemplate;
 
     @Autowired

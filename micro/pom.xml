@@ -11,6 +11,13 @@
         <module>micro-api</module>
         <module>micro-provider-dept-8001</module>
         <module>micro-consumer-dept-8000</module>
+        <module>micro-eureka-7000</module>
+        <module>micro-eureka-7001</module>
+        <module>micro-eureka-7002</module>
+        <module>micro-provider-dept-8002</module>
+        <module>micro-provider-dept-8003</module>
+        <module>micro-provider-dept-hystrix-8001</module>
+        <module>micro-consumer-dept-feign-8000</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -26,19 +33,20 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.1.6.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--数据库-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -54,7 +62,7 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>2.0.1</version>
             </dependency>
-
+            <!--工具-->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
@@ -71,6 +79,7 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
+            <!--热部署-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>springloaded</artifactId>
@@ -84,4 +93,25 @@
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <finalName>micro</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
