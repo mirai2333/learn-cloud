@@ -2,12 +2,12 @@ package com.mirai.micro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaServerApplication {
+@EnableHystrixDashboard
+public class HystrixDashboard {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerApplication.class, args);
+        SpringApplication.run(HystrixDashboard.class, args);
     }
 }

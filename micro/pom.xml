@@ -18,6 +18,7 @@
         <module>micro-provider-dept-8003</module>
         <module>micro-provider-dept-hystrix-8001</module>
         <module>micro-consumer-dept-feign-8000</module>
+        <module>micro-hystrix-dashboard</module>
     </modules>
     <packaging>pom</packaging>
 

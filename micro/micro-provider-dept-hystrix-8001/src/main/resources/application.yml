@@ -1,6 +1,7 @@
 server:
   port: 8001
 
+
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.mirai.micro.entity
@@ -33,3 +34,8 @@ info:
   company.name: mirai-Mars
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
