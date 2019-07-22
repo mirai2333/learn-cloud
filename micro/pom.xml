@@ -20,6 +20,7 @@
         <module>micro-consumer-dept-feign-8000</module>
         <module>micro-hystrix-dashboard</module>
         <module>micro-zuul-9527</module>
+        <module>micro-config-3344</module>
     </modules>
     <packaging>pom</packaging>
 

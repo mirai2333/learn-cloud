@@ -6,3 +6,4 @@
 /.idea/*
 # Project exclude paths
 /micro/micro-consumer-dept-8000/target/
+/micro/micro-config-3344/target/
