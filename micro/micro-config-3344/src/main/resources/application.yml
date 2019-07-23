@@ -8,3 +8,4 @@ spring:
       server:
         git:
           uri: https://github.com/mirai2333/learn-cloud-config.git
+---

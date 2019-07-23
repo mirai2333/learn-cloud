@@ -21,6 +21,7 @@
         <module>micro-hystrix-dashboard</module>
         <module>micro-zuul-9527</module>
         <module>micro-config-3344</module>
+        <module>micro-config-client-3355</module>
     </modules>
     <packaging>pom</packaging>
 
